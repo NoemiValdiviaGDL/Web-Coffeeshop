@@ -19,7 +19,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="stylesheet" href="./vendor/normalize.css" />
     <link rel="icon" href="favicon.ico.ico" />
     <title>Cafetería Gato Negro</title>
   </head>
@@ -47,7 +46,7 @@
           </nav>
         </div>
         <h1 class="header__title">
-          <span class="span-accent">Café de especialidad</span><br />
+          <span class="header__span-accent">Café de especialidad</span><br />
           en Triple Peaks
         </h1>
         <p class="header__description">
@@ -61,7 +60,7 @@
           class="header__image"
         />
         <div class="header__footer">
-          <ul class="footer__list">
+          <ul class="header__footer-list">
             <li class="footer__hours">Horario:</li>
             <li class="footer__hours">Lunes a Viernes (de 10:00h a 19:00h)</li>
             <li class="footer__hours">
@@ -110,10 +109,108 @@
             </div>
           </div>
         </section>
-
-        <section class="reservation"></section>
       </main>
-      <footer class="footer"></footer>
+      <section class="reservation" id="reservar-mesa">
+        <h2 class="reservation__title">Reservar una mesa</h2>
+        <form class="reservation__form form">
+          <fieldset class="form__fieldset">
+            <label class="form__label" for="name">Nombre *</label>
+            <input
+              class="form__input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Nombre"
+              required
+            />
+
+            <label class="form__label" for="comensales"
+              >Número de comensales *</label
+            >
+            <input
+              class="form__input"
+              type="number"
+              id="comensales"
+              name="comensales"
+              placeholder="1-8"
+              required
+            />
+            <label class="form__label" for="datetime-local"
+              >Fecha y hora *</label
+            >
+            <input
+              class="form__input"
+              type="date"
+              id="datetime-local"
+              name="datetime-local"
+              required
+            />
+            <label class="form__label" for="email"
+              >Tu correo electrónico *</label
+            >
+            <input
+              class="form__input"
+              type="email"
+              id="email"
+              name="imail"
+              placeholder="email@email.com"
+              required
+            />
+          </fieldset>
+
+          <button type="submit" class="form__button">Reservar una mesa</button>
+
+          <label class="form__label form__label_position" for="términos_de_uso">
+            <input
+              type="checkbox"
+              name="términos de uso"
+              id="términos_de_uso"
+              class="form__checkbox"
+              required
+              checked
+            />
+            Acepto los términos de uso</label
+          >
+        </form>
+      </section>
+
+      <footer class="footer" id="contactos">
+        <div class="footer__content">
+          <img
+            src="images/logo_coffeeshop_light.svg"
+            alt="logo_coffeeshop_dark"
+            class="footer__logo"
+          />
+          <div class="footer__circle"></div>
+          <div class="footer__social">
+            <h3 class="footer__social-heading">Redes sociales</h3>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__social-link">
+                  <img
+                    src="./images/facebook_white.svg"
+                    class="footer__social-icon"
+                    alt="facebook icono"
+                  />
+                  <span>Facebook</span></a
+                >
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__social-link">
+                  <img
+                    src="./images/instagram_white.svg"
+                    class="footer__social-icon"
+                    alt="instagram icono"
+                  />
+                  <span>Instagram</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__copyright">© 2024 Noemi Baldivia</div>
+      </footer>
     </div>
   </body>
 </html>
